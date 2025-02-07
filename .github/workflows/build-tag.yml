@@ -54,8 +54,6 @@ jobs:
         name: Run build-windows.exe
         env:
           TAG: ${{ needs.create_release.outputs.tag }}
-          CODE_SIGN_PFX: ${{ secrets.CODE_SIGN_PFX }}
-          CODE_SIGN_PFX_PASSWORD: ${{ secrets.CODE_SIGN_PFX_PASSWORD }}
         run: go run ./scripts/build-windows.go
       - name: Upload
         uses: actions/upload-artifact@v4
