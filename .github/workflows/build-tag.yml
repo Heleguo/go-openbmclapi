@@ -34,8 +34,6 @@ jobs:
 
   build-windows:
     runs-on: windows-2022
-    needs:
-      - create_release
     steps:
       -
         name: Action Checkout
